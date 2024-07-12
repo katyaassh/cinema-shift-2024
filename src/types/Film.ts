@@ -1,33 +1,33 @@
-interface IPerson {
+interface Person {
     id: number;
     fullName: string;
     professions: string[];
 }
 
-interface ICountry {
+interface Country {
     code: string;
     code2: string;
     id: number;
     name: string;
 }
 
-export interface IUserRatings {
+export interface UserRatings {
     imdb: string;
     kinopoisk: string;
 }
 
-export interface IFilm {
+export interface Film {
     id: number;
     name: string;
     originalName: string;
     description: string;
     releaseDate: string;
-    actors: IPerson[];
+    actors: Person[];
     ageRating: string;
-    country: ICountry;
-    directors: IPerson[];
+    country: Country;
+    directors: Person[];
     genres: string[];
     img: string;
     runtime: number;
-    userRatings: IUserRatings;
+    userRatings: UserRatings;
 }

@@ -17,6 +17,6 @@ const Container = styled(Button)<ButtonProps>`
     }
 `;
 
-export const MainButton = ({ ...props }): JSX.Element => {
+export const MainButton = ({ ...props }) => {
     return <Container {...props} />;
 };

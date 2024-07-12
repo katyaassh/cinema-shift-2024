@@ -1,4 +1,4 @@
-import { IFilm } from '../../../types/IFilm';
+import { Film } from '../../../types/Film';
 import { Card, CardActions, Typography } from '@mui/material';
 import { theme } from '../../../theme';
 import { MainButton } from '../../common/MainButton/MainButton';
@@ -6,8 +6,8 @@ import styled from '@emotion/styled';
 import { FilmImageContainer } from '../../common/FilmImageContainer/FilmImageContainer';
 import { StarRating } from '../../common/StarRating/StarRating';
 
-interface ICinemaCardProps {
-    film: IFilm;
+interface CinemaCardProps {
+    film: Film;
 }
 
 const CardEntity = styled(Card)`
@@ -35,7 +35,7 @@ const BottomBlock = styled('div')`
     margin-top: auto;
 `;
 
-export const CinemaCard = ({ film }: ICinemaCardProps): JSX.Element => {
+export const CinemaCard = ({ film }: CinemaCardProps) => {
     return (
         <CardEntity>
             <FilmImageContainer img={film.img} genres={film.genres} releaseDate={film.releaseDate} country={film.country.name} />

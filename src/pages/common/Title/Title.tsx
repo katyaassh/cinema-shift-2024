@@ -5,7 +5,7 @@ interface TitleProps {
     text: string;
 }
 
-export const Title = ({ text }: TitleProps): JSX.Element => {
+export const Title = ({ text }: TitleProps) => {
     return (
         <Typography variant={'h2'} color={`${theme.palette.primary.main}`}>
             {text}

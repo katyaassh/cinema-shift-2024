@@ -1,11 +1,11 @@
 import { Star } from '../Star/Star';
 import { Rating, Typography } from '@mui/material';
-import { IUserRatings } from '../../../types/IFilm';
+import { UserRatings } from '../../../types/Film';
 import { theme } from '../../../theme';
 import styled from '@emotion/styled';
 
-interface IStarRatingProps {
-    userRatings: IUserRatings;
+interface StarRatingProps {
+    userRatings: UserRatings;
 }
 
 const Container = styled('div')`
@@ -13,7 +13,7 @@ const Container = styled('div')`
     flex-direction: column;
     gap: 4px;
 `;
-export const StarRating = ({ userRatings }: IStarRatingProps): JSX.Element => {
+export const StarRating = ({ userRatings }: StarRatingProps) => {
     return (
         <Container>
             <Rating

@@ -21,7 +21,7 @@ interface MenuLinkProps {
     link: string;
 }
 
-export const MenuLink = ({ icon, text, link }: MenuLinkProps): JSX.Element => {
+export const MenuLink = ({ icon, text, link }: MenuLinkProps) => {
     return (
         <Container to={link}>
             <Image src={icon} alt='user' />

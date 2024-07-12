@@ -1,6 +1,6 @@
 import { NavLink, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { IFilmByIdResponse } from '../../types/IFilmByIdResponse';
+import { FilmByIdResponse } from '../../types/FilmByIdResponse';
 import { getFilmById } from '../../api/cinema';
 import { Container as InnerContainer } from '../common/Container/Container';
 import styled from '@emotion/styled';
@@ -24,10 +24,10 @@ const BackButton = styled(NavLink)`
     color: ${theme.palette.primary.dark};
 `;
 
-export const Film = (): JSX.Element => {
+export const Film = () => {
     const params = useParams();
 
-    const [film, setFilm] = useState<IFilmByIdResponse>({});
+    const [film, setFilm] = useState<FilmByIdResponse>({});
 
     useEffect(() => {
         getFilmById(Number(params.id)).then((response) => {

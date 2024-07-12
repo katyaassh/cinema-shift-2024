@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getCinemaToday } from '../../../api/cinema';
-import { ICinemaTodayResponse } from '../../../types/ICinemaTodayResponse';
+import { CinemaTodayResponse } from '../../../types/CinemaTodayResponse';
 import { CinemaCard } from '../CinemaCard/CinemaCard';
 import styled from '@emotion/styled';
 import { Container as InnerContainer } from '../../common/Container/Container';
@@ -11,8 +11,8 @@ const InnerContainerEntity = styled(InnerContainer)`
     gap: 32px;
 `;
 
-export const CinemaCards = (): JSX.Element => {
-    const [cinemaToday, setCinemaToday] = useState<ICinemaTodayResponse>({});
+export const CinemaCards = () => {
+    const [cinemaToday, setCinemaToday] = useState<CinemaTodayResponse>({});
 
     useEffect(() => {
         getCinemaToday().then((response) => {

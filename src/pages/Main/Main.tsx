@@ -10,7 +10,7 @@ const InnerContainerEntity = styled(InnerContainer)`
     margin-top: 48px;
 `;
 
-export const Main = (): JSX.Element => {
+export const Main = () => {
     return (
         <main>
             <InnerContainerEntity>

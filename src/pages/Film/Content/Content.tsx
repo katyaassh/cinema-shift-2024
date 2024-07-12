@@ -1,4 +1,4 @@
-import { IFilm } from '../../../types/IFilm';
+import { Film } from '../../../types/Film';
 import { FilmImageContainer } from '../../common/FilmImageContainer/FilmImageContainer';
 import { Button, ButtonProps, Typography } from '@mui/material';
 import styled from '@emotion/styled';
@@ -7,8 +7,8 @@ import { StarRating } from '../../common/StarRating/StarRating';
 import { useState } from 'react';
 import { theme } from '../../../theme';
 
-interface IContentProps {
-    film: IFilm;
+interface ContentProps {
+    film: Film;
 }
 
 const Container = styled('div')`
@@ -34,7 +34,7 @@ const OpenButton = styled(Button)<ButtonProps>`
     color: ${theme.palette.secondary.light};
 `;
 
-export const Content = ({ film }: IContentProps): JSX.Element => {
+export const Content = ({ film }: ContentProps) => {
     const [isSliced, setIsSliced] = useState(true);
 
     const textDescriptions = film.description.length > 150 ? film.description.substring(0, 150) : film.description;

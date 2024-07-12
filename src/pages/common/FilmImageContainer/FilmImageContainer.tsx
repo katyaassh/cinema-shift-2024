@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 import styled from '@emotion/styled';
 import { theme } from '../../../theme';
 
-interface IFilmImageContainerProps {
+interface FilmImageContainerProps {
     img: string;
     genres: string[];
     country: string;
@@ -35,7 +35,7 @@ const Label = styled('div')`
     background-color: ${theme.palette.secondary.contrastText};
 `;
 
-export const FilmImageContainer = ({ img, releaseDate, country, genres }: IFilmImageContainerProps): JSX.Element => {
+export const FilmImageContainer = ({ img, releaseDate, country, genres }: FilmImageContainerProps) => {
     return (
         <Container>
             <Image src={baseUrl + img} alt='' />

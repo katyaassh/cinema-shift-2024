@@ -25,7 +25,7 @@ const LeftContainer = styled('div')`
     gap: 32px;
 `;
 
-export const Header = (): JSX.Element => {
+export const Header = () => {
     return (
         <Container>
             <InnerContainerEntity>
